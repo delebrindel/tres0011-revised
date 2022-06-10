@@ -1,0 +1,51 @@
+@use "../../scss/_palette.scss" as pal;
+@use "../../scss/mixins.scss" as mxn;
+
+.navbar {
+  background: pal.$color-primary;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  @include mxn.md {
+    padding: 0.5em 0;
+  }
+
+  .title {
+    @include mxn.center-flex;
+    margin-left: 1em;
+    font-size: 2rem;
+    color: pal.$color-white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .pageSections {
+    @include mxn.center-flex;
+    color: pal.$color-white;
+    margin-right: 1em;
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
+      @include mxn.md {
+        flex-direction: row;
+      }
+      li {
+        margin-left: 0.5em;
+        cursor: pointer;
+
+        a {
+          color: pal.$color-white;
+          text-decoration: none;
+
+          &.active {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@use "../../scss/palette" as pal;
+@use "../../scss/mixins" as mxn;
+ 
+.hero {
+  font-size: 3rem;
+  width: 100%;
+
+  min-height: 15rem;
+  @include mxn.center-flex;
+
+  @include mxn.md{
+    font-size: 4rem;
+    max-width: 1366px;
+  }
+}

@@ -1,0 +1,12 @@
+@use "../../scss/palette" as pal;
+@use "../../scss/mixins" as mxn;
+
+.footer {
+  @include mxn.center-flex;
+  padding: 0.5em 0;
+  position: fixed;
+  bottom: 0;
+  background: pal.$color-primary;
+  color: pal.$color-white;
+  width: 100%;
+}
